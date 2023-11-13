@@ -1,0 +1,67 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34031.279
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{F1060096-8591-40C1-9998-4BBC1916F8F7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{F4D9FC86-4E7E-440A-8352-E79455286AFC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{0258FD9F-738F-4310-B867-70D0BB29422E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "API", "API", "{DADDEB70-3A84-4EB4-A313-771FCBEFE728}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rayify.Domain", "src\Core\Rayify.Domain\Rayify.Domain.csproj", "{5A78FB85-3574-4CB6-8793-12A90841FAF1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rayify.Application", "src\Core\Rayify.Application\Rayify.Application.csproj", "{F9D44E27-2FDB-4178-A7C2-E1A71838FFDB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rayify.Infrastructure", "src\Infrastructure\Rayify.Infrastructure\Rayify.Infrastructure.csproj", "{DEC86FDA-8EFE-4E99-963B-EC2A7F3091A9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rayify.Persistence", "src\Infrastructure\Rayify.Persistence\Rayify.Persistence.csproj", "{B4950E27-8C78-4230-A86E-402D1BBCA37F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rayify.API", "src\API\Rayify.API\Rayify.API.csproj", "{C9847566-5A24-4442-88F4-F28AAE0004A9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5A78FB85-3574-4CB6-8793-12A90841FAF1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A78FB85-3574-4CB6-8793-12A90841FAF1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A78FB85-3574-4CB6-8793-12A90841FAF1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A78FB85-3574-4CB6-8793-12A90841FAF1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F9D44E27-2FDB-4178-A7C2-E1A71838FFDB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F9D44E27-2FDB-4178-A7C2-E1A71838FFDB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F9D44E27-2FDB-4178-A7C2-E1A71838FFDB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F9D44E27-2FDB-4178-A7C2-E1A71838FFDB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DEC86FDA-8EFE-4E99-963B-EC2A7F3091A9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DEC86FDA-8EFE-4E99-963B-EC2A7F3091A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DEC86FDA-8EFE-4E99-963B-EC2A7F3091A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DEC86FDA-8EFE-4E99-963B-EC2A7F3091A9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B4950E27-8C78-4230-A86E-402D1BBCA37F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B4950E27-8C78-4230-A86E-402D1BBCA37F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B4950E27-8C78-4230-A86E-402D1BBCA37F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B4950E27-8C78-4230-A86E-402D1BBCA37F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C9847566-5A24-4442-88F4-F28AAE0004A9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C9847566-5A24-4442-88F4-F28AAE0004A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C9847566-5A24-4442-88F4-F28AAE0004A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C9847566-5A24-4442-88F4-F28AAE0004A9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F4D9FC86-4E7E-440A-8352-E79455286AFC} = {F1060096-8591-40C1-9998-4BBC1916F8F7}
+		{0258FD9F-738F-4310-B867-70D0BB29422E} = {F1060096-8591-40C1-9998-4BBC1916F8F7}
+		{DADDEB70-3A84-4EB4-A313-771FCBEFE728} = {F1060096-8591-40C1-9998-4BBC1916F8F7}
+		{5A78FB85-3574-4CB6-8793-12A90841FAF1} = {F4D9FC86-4E7E-440A-8352-E79455286AFC}
+		{F9D44E27-2FDB-4178-A7C2-E1A71838FFDB} = {F4D9FC86-4E7E-440A-8352-E79455286AFC}
+		{DEC86FDA-8EFE-4E99-963B-EC2A7F3091A9} = {0258FD9F-738F-4310-B867-70D0BB29422E}
+		{B4950E27-8C78-4230-A86E-402D1BBCA37F} = {0258FD9F-738F-4310-B867-70D0BB29422E}
+		{C9847566-5A24-4442-88F4-F28AAE0004A9} = {DADDEB70-3A84-4EB4-A313-771FCBEFE728}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7EE87DE8-4B9A-48AB-8176-D343AFB1DC51}
+	EndGlobalSection
+EndGlobal
