@@ -13,12 +13,12 @@ using UserEntity = Rayify.Domain.Entities.Identity.AppUser;
 namespace Rayify.Application.Features.Commands.AppUser.LoginUser
 {
 
-    public class LoginUserCommendHandler : IRequestHandler<LoginUserCommandRequest, LoginUserCommandResponse>
+    public class LoginUserCommandHandler : IRequestHandler<LoginUserCommandRequest, LoginUserCommandResponse>
     {
         private readonly UserManager<UserEntity> _userManager;
         private readonly SignInManager<UserEntity> _singInManager;
         private readonly ITokenHandler _tokenHandler;
-        public LoginUserCommendHandler(UserManager<UserEntity> userManager, SignInManager<UserEntity> singInManager, ITokenHandler tokenHandler )
+        public LoginUserCommandHandler(UserManager<UserEntity> userManager, SignInManager<UserEntity> singInManager, ITokenHandler tokenHandler )
         {
             _userManager = userManager;
             _singInManager = singInManager;
@@ -34,7 +34,7 @@ namespace Rayify.Application.Features.Commands.AppUser.LoginUser
             SignInResult result = await _singInManager.CheckPasswordSignInAsync(user, request.password, false);
             if(result.Succeeded) 
             {
-                Token token = _tokenHandler.CreateAccessToken(1441);
+                Token token = _tokenHandler.CreateAccessToken(1441, user.UserName);
                 return new LoginUserCommandSuccessResponse()
                 {
                     Token = token,

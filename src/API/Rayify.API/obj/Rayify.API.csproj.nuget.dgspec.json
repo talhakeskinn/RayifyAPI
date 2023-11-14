@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\TK\\Desktop\\rpoje\\Rayify\\src\\API\\Rayify.API\\Rayify.API.csproj": {}
+    "C:\\Users\\memin\\source\\repos\\talhakeskinn\\RayifyAPI\\src\\API\\Rayify.API\\Rayify.API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\TK\\Desktop\\rpoje\\Rayify\\src\\API\\Rayify.API\\Rayify.API.csproj": {
+    "C:\\Users\\memin\\source\\repos\\talhakeskinn\\RayifyAPI\\src\\API\\Rayify.API\\Rayify.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\TK\\Desktop\\rpoje\\Rayify\\src\\API\\Rayify.API\\Rayify.API.csproj",
+        "projectUniqueName": "C:\\Users\\memin\\source\\repos\\talhakeskinn\\RayifyAPI\\src\\API\\Rayify.API\\Rayify.API.csproj",
         "projectName": "Rayify.API",
-        "projectPath": "C:\\Users\\TK\\Desktop\\rpoje\\Rayify\\src\\API\\Rayify.API\\Rayify.API.csproj",
-        "packagesPath": "C:\\Users\\TK\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\TK\\Desktop\\rpoje\\Rayify\\src\\API\\Rayify.API\\obj\\",
+        "projectPath": "C:\\Users\\memin\\source\\repos\\talhakeskinn\\RayifyAPI\\src\\API\\Rayify.API\\Rayify.API.csproj",
+        "packagesPath": "C:\\Users\\memin\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\memin\\source\\repos\\talhakeskinn\\RayifyAPI\\src\\API\\Rayify.API\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\TK\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\memin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -28,11 +28,11 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\TK\\Desktop\\rpoje\\Rayify\\src\\Core\\Rayify.Application\\Rayify.Application.csproj": {
-                "projectPath": "C:\\Users\\TK\\Desktop\\rpoje\\Rayify\\src\\Core\\Rayify.Application\\Rayify.Application.csproj"
+              "C:\\Users\\memin\\source\\repos\\talhakeskinn\\RayifyAPI\\src\\Core\\Rayify.Application\\Rayify.Application.csproj": {
+                "projectPath": "C:\\Users\\memin\\source\\repos\\talhakeskinn\\RayifyAPI\\src\\Core\\Rayify.Application\\Rayify.Application.csproj"
               },
-              "C:\\Users\\TK\\Desktop\\rpoje\\Rayify\\src\\Infrastructure\\Rayify.Persistence\\Rayify.Persistence.csproj": {
-                "projectPath": "C:\\Users\\TK\\Desktop\\rpoje\\Rayify\\src\\Infrastructure\\Rayify.Persistence\\Rayify.Persistence.csproj"
+              "C:\\Users\\memin\\source\\repos\\talhakeskinn\\RayifyAPI\\src\\Infrastructure\\Rayify.Persistence\\Rayify.Persistence.csproj": {
+                "projectPath": "C:\\Users\\memin\\source\\repos\\talhakeskinn\\RayifyAPI\\src\\Infrastructure\\Rayify.Persistence\\Rayify.Persistence.csproj"
               }
             }
           }
@@ -77,21 +77,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\TK\\Desktop\\rpoje\\Rayify\\src\\Core\\Rayify.Application\\Rayify.Application.csproj": {
+    "C:\\Users\\memin\\source\\repos\\talhakeskinn\\RayifyAPI\\src\\Core\\Rayify.Application\\Rayify.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\TK\\Desktop\\rpoje\\Rayify\\src\\Core\\Rayify.Application\\Rayify.Application.csproj",
+        "projectUniqueName": "C:\\Users\\memin\\source\\repos\\talhakeskinn\\RayifyAPI\\src\\Core\\Rayify.Application\\Rayify.Application.csproj",
         "projectName": "Rayify.Application",
-        "projectPath": "C:\\Users\\TK\\Desktop\\rpoje\\Rayify\\src\\Core\\Rayify.Application\\Rayify.Application.csproj",
-        "packagesPath": "C:\\Users\\TK\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\TK\\Desktop\\rpoje\\Rayify\\src\\Core\\Rayify.Application\\obj\\",
+        "projectPath": "C:\\Users\\memin\\source\\repos\\talhakeskinn\\RayifyAPI\\src\\Core\\Rayify.Application\\Rayify.Application.csproj",
+        "packagesPath": "C:\\Users\\memin\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\memin\\source\\repos\\talhakeskinn\\RayifyAPI\\src\\Core\\Rayify.Application\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\TK\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\memin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -105,8 +105,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\TK\\Desktop\\rpoje\\Rayify\\src\\Core\\Rayify.Domain\\Rayify.Domain.csproj": {
-                "projectPath": "C:\\Users\\TK\\Desktop\\rpoje\\Rayify\\src\\Core\\Rayify.Domain\\Rayify.Domain.csproj"
+              "C:\\Users\\memin\\source\\repos\\talhakeskinn\\RayifyAPI\\src\\Core\\Rayify.Domain\\Rayify.Domain.csproj": {
+                "projectPath": "C:\\Users\\memin\\source\\repos\\talhakeskinn\\RayifyAPI\\src\\Core\\Rayify.Domain\\Rayify.Domain.csproj"
               }
             }
           }
@@ -142,21 +142,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\TK\\Desktop\\rpoje\\Rayify\\src\\Core\\Rayify.Domain\\Rayify.Domain.csproj": {
+    "C:\\Users\\memin\\source\\repos\\talhakeskinn\\RayifyAPI\\src\\Core\\Rayify.Domain\\Rayify.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\TK\\Desktop\\rpoje\\Rayify\\src\\Core\\Rayify.Domain\\Rayify.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\memin\\source\\repos\\talhakeskinn\\RayifyAPI\\src\\Core\\Rayify.Domain\\Rayify.Domain.csproj",
         "projectName": "Rayify.Domain",
-        "projectPath": "C:\\Users\\TK\\Desktop\\rpoje\\Rayify\\src\\Core\\Rayify.Domain\\Rayify.Domain.csproj",
-        "packagesPath": "C:\\Users\\TK\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\TK\\Desktop\\rpoje\\Rayify\\src\\Core\\Rayify.Domain\\obj\\",
+        "projectPath": "C:\\Users\\memin\\source\\repos\\talhakeskinn\\RayifyAPI\\src\\Core\\Rayify.Domain\\Rayify.Domain.csproj",
+        "packagesPath": "C:\\Users\\memin\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\memin\\source\\repos\\talhakeskinn\\RayifyAPI\\src\\Core\\Rayify.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\TK\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\memin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -207,21 +207,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\TK\\Desktop\\rpoje\\Rayify\\src\\Infrastructure\\Rayify.Infrastructure\\Rayify.Infrastructure.csproj": {
+    "C:\\Users\\memin\\source\\repos\\talhakeskinn\\RayifyAPI\\src\\Infrastructure\\Rayify.Infrastructure\\Rayify.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\TK\\Desktop\\rpoje\\Rayify\\src\\Infrastructure\\Rayify.Infrastructure\\Rayify.Infrastructure.csproj",
+        "projectUniqueName": "C:\\Users\\memin\\source\\repos\\talhakeskinn\\RayifyAPI\\src\\Infrastructure\\Rayify.Infrastructure\\Rayify.Infrastructure.csproj",
         "projectName": "Rayify.Infrastructure",
-        "projectPath": "C:\\Users\\TK\\Desktop\\rpoje\\Rayify\\src\\Infrastructure\\Rayify.Infrastructure\\Rayify.Infrastructure.csproj",
-        "packagesPath": "C:\\Users\\TK\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\TK\\Desktop\\rpoje\\Rayify\\src\\Infrastructure\\Rayify.Infrastructure\\obj\\",
+        "projectPath": "C:\\Users\\memin\\source\\repos\\talhakeskinn\\RayifyAPI\\src\\Infrastructure\\Rayify.Infrastructure\\Rayify.Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\memin\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\memin\\source\\repos\\talhakeskinn\\RayifyAPI\\src\\Infrastructure\\Rayify.Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\TK\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\memin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -235,8 +235,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\TK\\Desktop\\rpoje\\Rayify\\src\\Core\\Rayify.Application\\Rayify.Application.csproj": {
-                "projectPath": "C:\\Users\\TK\\Desktop\\rpoje\\Rayify\\src\\Core\\Rayify.Application\\Rayify.Application.csproj"
+              "C:\\Users\\memin\\source\\repos\\talhakeskinn\\RayifyAPI\\src\\Core\\Rayify.Application\\Rayify.Application.csproj": {
+                "projectPath": "C:\\Users\\memin\\source\\repos\\talhakeskinn\\RayifyAPI\\src\\Core\\Rayify.Application\\Rayify.Application.csproj"
               }
             }
           }
@@ -272,21 +272,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\TK\\Desktop\\rpoje\\Rayify\\src\\Infrastructure\\Rayify.Persistence\\Rayify.Persistence.csproj": {
+    "C:\\Users\\memin\\source\\repos\\talhakeskinn\\RayifyAPI\\src\\Infrastructure\\Rayify.Persistence\\Rayify.Persistence.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\TK\\Desktop\\rpoje\\Rayify\\src\\Infrastructure\\Rayify.Persistence\\Rayify.Persistence.csproj",
+        "projectUniqueName": "C:\\Users\\memin\\source\\repos\\talhakeskinn\\RayifyAPI\\src\\Infrastructure\\Rayify.Persistence\\Rayify.Persistence.csproj",
         "projectName": "Rayify.Persistence",
-        "projectPath": "C:\\Users\\TK\\Desktop\\rpoje\\Rayify\\src\\Infrastructure\\Rayify.Persistence\\Rayify.Persistence.csproj",
-        "packagesPath": "C:\\Users\\TK\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\TK\\Desktop\\rpoje\\Rayify\\src\\Infrastructure\\Rayify.Persistence\\obj\\",
+        "projectPath": "C:\\Users\\memin\\source\\repos\\talhakeskinn\\RayifyAPI\\src\\Infrastructure\\Rayify.Persistence\\Rayify.Persistence.csproj",
+        "packagesPath": "C:\\Users\\memin\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\memin\\source\\repos\\talhakeskinn\\RayifyAPI\\src\\Infrastructure\\Rayify.Persistence\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\TK\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\memin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -300,11 +300,11 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\TK\\Desktop\\rpoje\\Rayify\\src\\Core\\Rayify.Application\\Rayify.Application.csproj": {
-                "projectPath": "C:\\Users\\TK\\Desktop\\rpoje\\Rayify\\src\\Core\\Rayify.Application\\Rayify.Application.csproj"
+              "C:\\Users\\memin\\source\\repos\\talhakeskinn\\RayifyAPI\\src\\Core\\Rayify.Application\\Rayify.Application.csproj": {
+                "projectPath": "C:\\Users\\memin\\source\\repos\\talhakeskinn\\RayifyAPI\\src\\Core\\Rayify.Application\\Rayify.Application.csproj"
               },
-              "C:\\Users\\TK\\Desktop\\rpoje\\Rayify\\src\\Infrastructure\\Rayify.Infrastructure\\Rayify.Infrastructure.csproj": {
-                "projectPath": "C:\\Users\\TK\\Desktop\\rpoje\\Rayify\\src\\Infrastructure\\Rayify.Infrastructure\\Rayify.Infrastructure.csproj"
+              "C:\\Users\\memin\\source\\repos\\talhakeskinn\\RayifyAPI\\src\\Infrastructure\\Rayify.Infrastructure\\Rayify.Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\memin\\source\\repos\\talhakeskinn\\RayifyAPI\\src\\Infrastructure\\Rayify.Infrastructure\\Rayify.Infrastructure.csproj"
               }
             }
           }
@@ -350,7 +350,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
         }
       }
     }

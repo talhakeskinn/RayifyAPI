@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\TK\\Desktop\\rpoje\\Rayify\\src\\Core\\Rayify.Domain\\Rayify.Domain.csproj": {}
+    "C:\\Users\\memin\\source\\repos\\talhakeskinn\\RayifyAPI\\src\\Core\\Rayify.Domain\\Rayify.Domain.csproj": {}
   },
   "projects": {
-    "C:\\Users\\TK\\Desktop\\rpoje\\Rayify\\src\\Core\\Rayify.Domain\\Rayify.Domain.csproj": {
+    "C:\\Users\\memin\\source\\repos\\talhakeskinn\\RayifyAPI\\src\\Core\\Rayify.Domain\\Rayify.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\TK\\Desktop\\rpoje\\Rayify\\src\\Core\\Rayify.Domain\\Rayify.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\memin\\source\\repos\\talhakeskinn\\RayifyAPI\\src\\Core\\Rayify.Domain\\Rayify.Domain.csproj",
         "projectName": "Rayify.Domain",
-        "projectPath": "C:\\Users\\TK\\Desktop\\rpoje\\Rayify\\src\\Core\\Rayify.Domain\\Rayify.Domain.csproj",
-        "packagesPath": "C:\\Users\\TK\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\TK\\Desktop\\rpoje\\Rayify\\src\\Core\\Rayify.Domain\\obj\\",
+        "projectPath": "C:\\Users\\memin\\source\\repos\\talhakeskinn\\RayifyAPI\\src\\Core\\Rayify.Domain\\Rayify.Domain.csproj",
+        "packagesPath": "C:\\Users\\memin\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\memin\\source\\repos\\talhakeskinn\\RayifyAPI\\src\\Core\\Rayify.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\TK\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\memin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -65,7 +65,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
         }
       }
     }
