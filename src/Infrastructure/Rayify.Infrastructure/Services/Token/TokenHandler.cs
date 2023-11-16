@@ -27,7 +27,7 @@ namespace Rayify.Infrastructure.Services.Token
            token.Expiration = DateTime.UtcNow.AddMinutes(minute);
             List<Claim> claims = new List<Claim>
             {
-                new Claim(ClaimTypes.Name, username),
+                new Claim("username", username),
             };
             JwtSecurityToken securityToken = new(
                 audience: _conf["JWTOptions:Audience"],
