@@ -1,6 +1,7 @@
 using Rayify.Persistence;
 using Rayify.Application;
 using Rayify.Infrastructure;
+using Rayify.Infrastructure.Services.Storage.Local;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -8,6 +9,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddPersistenceServices();
 builder.Services.AddApplicationServices();
 builder.Services.AddInfrastructureServices();
+builder.Services.AddStorage<LocalStorage>();
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
