@@ -11,13 +11,13 @@ namespace Rayify.Domain.Entities
     {
         public string Title { get; set; }
         public string? Description { get; set; }
-        public string Language { get; set; }
+        public string? Language { get; set; }
         public string Path { get; set; }
         public DateTime Published { get; set; }
-        public ICollection<Tag> Tags { get; set; }
-        public Genre Genre { get; set; }
-        public Album Album { get; set; }
-        public ICollection<Singer> Singers { get; set; }
+        public ICollection<Tag>? Tags { get; set; }
+        public Genre? Genre { get; set; }
+        public Album? Album { get; set; }
+        public ICollection<Singer>? Singers { get; set; }
 
     }
 }

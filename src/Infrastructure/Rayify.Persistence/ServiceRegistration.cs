@@ -1,7 +1,9 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
+using Rayify.Application.Repositories.Music;
 using Rayify.Domain.Entities.Identity;
 using Rayify.Persistence.Contexts;
+using Rayify.Persistence.Repositories.Music;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -24,6 +26,8 @@ namespace Rayify.Persistence
                 options.Password.RequireUppercase = false;
 
             }).AddEntityFrameworkStores<RayifyDbContext>();
+            services.AddScoped<IMusicReadRepository, MusicReadRepository>();
+            services.AddScoped<IMusicWriteRepository, MusicWriteRepository>();
         }
     }
 }

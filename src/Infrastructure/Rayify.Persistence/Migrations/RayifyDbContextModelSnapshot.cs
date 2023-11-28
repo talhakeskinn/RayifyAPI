@@ -308,7 +308,7 @@ namespace Rayify.Persistence.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uuid");
 
-                    b.Property<Guid>("AlbumId")
+                    b.Property<Guid?>("AlbumId")
                         .HasColumnType("uuid");
 
                     b.Property<DateTime>("Created")
@@ -317,11 +317,10 @@ namespace Rayify.Persistence.Migrations
                     b.Property<string>("Description")
                         .HasColumnType("text");
 
-                    b.Property<Guid>("GenreId")
+                    b.Property<Guid?>("GenreId")
                         .HasColumnType("uuid");
 
                     b.Property<string>("Language")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<string>("Path")
@@ -480,15 +479,11 @@ namespace Rayify.Persistence.Migrations
                 {
                     b.HasOne("Rayify.Domain.Entities.Album", "Album")
                         .WithMany("Musics")
-                        .HasForeignKey("AlbumId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("AlbumId");
 
                     b.HasOne("Rayify.Domain.Entities.Genre", "Genre")
                         .WithMany("Musics")
-                        .HasForeignKey("GenreId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("GenreId");
 
                     b.Navigation("Album");
 

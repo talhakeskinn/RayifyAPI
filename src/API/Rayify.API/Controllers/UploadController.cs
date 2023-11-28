@@ -7,26 +7,27 @@ using System.Text.Json;
 using YoutubeExplode;
 using YoutubeExplode.Videos.Streams;
 using YoutubeExplode.Converter;
+using MediaToolkit.Model;
+using MediaToolkit;
+using System.Text.RegularExpressions;
+using MediatR;
+using Rayify.Application.Features.Commands.Music.AddTrends;
 
 namespace Rayify.API.Controllers
 {
-    public class UploadController : Controller
+    [Route("api/[controller]")]
+    [ApiController]
+    public class UploadController : ControllerBase
     {
-        private readonly IStorageService _storageService;
         private readonly IMusicService _musicService;
         private readonly IWebHostEnvironment _webHostEnvironment;
-        public UploadController(IStorageService storageService, IMusicService musicService, IWebHostEnvironment webHostEnvironment)
+        private readonly IMediator _mediator;
+
+        public UploadController(IMusicService musicService, IWebHostEnvironment webHostEnvironment, IMediator mediator)
         {
-            _storageService = storageService;
             _musicService = musicService;
             _webHostEnvironment = webHostEnvironment;
-        }
-
-        [HttpPost("[action]")]
-        public async Task<IActionResult> Upload(IFormFileCollection files)
-        {
-            var values = await _storageService.UploadAsync("musics", files);
-            return Ok(values);
+            _mediator = mediator;
         }
 
         [HttpGet("[action]")]
@@ -39,14 +40,36 @@ namespace Rayify.API.Controllers
         [HttpGet("[action]")]
         public async Task<IActionResult> DownloadVideo()
         {
+            
+            var trends = await _musicService.GetTrendMusics(10, "tr");
             var youtube = new YoutubeClient();
-            var videoUrl = "https://youtube.com/watch?v=u_yIGGhubZs";
-            var streamManifest = await youtube.Videos.Streams.GetManifestAsync(videoUrl);
+            Regex regex = new("[*'\",+-._&#^@|/<>~]");
+            foreach (var music in trends)
+            {
+                var streamManifest = await youtube.Videos.Streams.GetManifestAsync($"https://youtube.com/watch?v={music.Id}");
+                var streamInfo = streamManifest.GetAudioOnlyStreams().GetWithHighestBitrate();
+                var stream = await youtube.Videos.Streams.GetAsync(streamInfo);
+                string videoPath = Path.Combine(_webHostEnvironment.WebRootPath, $"musics/videos/{music.Id}.{streamInfo.Container}");
+                string musicPath = Path.Combine(_webHostEnvironment.WebRootPath, $"musics/mp3/{music.Id}.mp3");
+                await youtube.Videos.Streams.DownloadAsync(streamInfo, videoPath);
+                var inputFile = new MediaFile(videoPath);
+                var outputFile = new MediaFile(musicPath);
+                using (var engine = new Engine())
+                {
+                    engine.Convert(inputFile, outputFile);
+                }
 
-            var streamInfo = streamManifest.GetAudioOnlyStreams().GetWithHighestBitrate();
-            var stream = await youtube.Videos.Streams.GetAsync(streamInfo);
-            await youtube.Videos.Streams.DownloadAsync(streamInfo, $"video.{streamInfo.Container}");
+                AddTrendsCommandRequest request = new()
+                {
+                    Title = music.Title,
+                    Description = music.Description,
+                    Language= music.Language,
+                    Published = music.PublishedAt,
+                    Path = $"musics/mp3/{music.Id}.mp3"
+                };
 
+                await _mediator.Send(request);
+            }
             return Ok();
         }
     }
