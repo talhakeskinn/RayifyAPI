@@ -18,6 +18,7 @@ namespace Rayify.Application.Features.Commands.AppUser.LoginUser
     public class LoginUserCommandFailedResponse: LoginUserCommandResponse
     {
         public string Message { get; set; }
+        public string Code { get; set; }
     }
 
 }

@@ -42,7 +42,7 @@ namespace Rayify.Application.Features.Commands.AppUser.LoginUser
             }
             return new LoginUserCommandFailedResponse()
             {
-                Message = "Giriş Sırasında hata oluştu !!!"
+                Message = "Giriş Sırasında hata oluştu !!!",
             };
 
         }
