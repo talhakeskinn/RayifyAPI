@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace Rayify.Infrastructure.Services.Music
 {
-    public class MusicService : IMusicService
+    public class MusicService : IMusic
     {
         private readonly YouTubeService _youtubeService;
         

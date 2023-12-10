@@ -1,17 +1,11 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Rayify.Application.Abstractions.Storage.Main;
-using Google.Apis.Services;
-using Google.Apis.YouTube.v3;
 using Rayify.Application.Abstractions.Music;
-using System.Text.Json;
-using YoutubeExplode;
-using YoutubeExplode.Videos.Streams;
-using YoutubeExplode.Converter;
 using MediaToolkit.Model;
 using MediaToolkit;
-using System.Text.RegularExpressions;
 using MediatR;
 using Rayify.Application.Features.Commands.Music.AddTrends;
+using Rayify.Application.Abstractions.YoutubeDownload;
+using Rayify.Application.Abstractions.ConvertVideo;
 
 namespace Rayify.API.Controllers
 {
@@ -19,15 +13,17 @@ namespace Rayify.API.Controllers
     [ApiController]
     public class UploadController : ControllerBase
     {
-        private readonly IMusicService _musicService;
-        private readonly IWebHostEnvironment _webHostEnvironment;
+        private readonly IMusic _musicService;
+        private readonly IYoutubeDownload _youtubeDownload;
         private readonly IMediator _mediator;
+        private readonly IConvertVideo _convertVideo;
 
-        public UploadController(IMusicService musicService, IWebHostEnvironment webHostEnvironment, IMediator mediator)
+        public UploadController(IMusic musicService, IWebHostEnvironment webHostEnvironment, IMediator mediator, IYoutubeDownload youtubeDownload, IConvertVideo convertVideo)
         {
             _musicService = musicService;
-            _webHostEnvironment = webHostEnvironment;
             _mediator = mediator;
+            _youtubeDownload = youtubeDownload;
+            _convertVideo = convertVideo;
         }
 
         [HttpGet("[action]")]
@@ -41,23 +37,12 @@ namespace Rayify.API.Controllers
         public async Task<IActionResult> DownloadVideo()
         {
             
-            var trends = await _musicService.GetTrendMusics(10, "tr");
-            var youtube = new YoutubeClient();
-            Regex regex = new("[*'\",+-._&#^@|/<>~]");
+            var trends = await _musicService.GetTrendMusics(11, "tr");
+            
             foreach (var music in trends)
             {
-                var streamManifest = await youtube.Videos.Streams.GetManifestAsync($"https://youtube.com/watch?v={music.Id}");
-                var streamInfo = streamManifest.GetAudioOnlyStreams().GetWithHighestBitrate();
-                var stream = await youtube.Videos.Streams.GetAsync(streamInfo);
-                string videoPath = Path.Combine(_webHostEnvironment.WebRootPath, $"musics/videos/{music.Id}.{streamInfo.Container}");
-                string musicPath = Path.Combine(_webHostEnvironment.WebRootPath, $"musics/mp3/{music.Id}.mp3");
-                await youtube.Videos.Streams.DownloadAsync(streamInfo, videoPath);
-                var inputFile = new MediaFile(videoPath);
-                var outputFile = new MediaFile(musicPath);
-                using (var engine = new Engine())
-                {
-                    engine.Convert(inputFile, outputFile);
-                }
+                string videoPath = await _youtubeDownload.DownloadMusicAsync(music, "musics/videos");
+                string mp3Path = _convertVideo.ConvertToMp3(videoPath, "musics/mp3", music.Id);
 
                 AddTrendsCommandRequest request = new()
                 {
@@ -65,7 +50,7 @@ namespace Rayify.API.Controllers
                     Description = music.Description,
                     Language= music.Language,
                     Published = music.PublishedAt,
-                    Path = $"musics/mp3/{music.Id}.mp3"
+                    Path = mp3Path
                 };
 
                 await _mediator.Send(request);

@@ -1,50 +1,52 @@
 ﻿using MediatR;
 using Rayify.Application.Repositories.Music;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
 namespace Rayify.Application.Features.Commands.Music.AddTrends
 {
     public class AddTrendsCommandHandler : IRequestHandler<AddTrendsCommandRequest, AddTrendsCommandResponse>
     {
         private readonly IMusicWriteRepository _writeRepository;
+        private readonly IMusicReadRepository _readRepository;
 
-        public AddTrendsCommandHandler(IMusicWriteRepository writeRepository)
+        public AddTrendsCommandHandler(IMusicWriteRepository writeRepository, IMusicReadRepository readRepository)
         {
             _writeRepository = writeRepository;
+            _readRepository = readRepository;
         }
 
         public async Task<AddTrendsCommandResponse> Handle(AddTrendsCommandRequest request, CancellationToken cancellationToken)
         {   
-            Guid Id = Guid.NewGuid();
-            Domain.Entities.Music music = new()
+            var music = _readRepository.GetWhere(m => m.Path ==  request.Path).FirstOrDefault();
+            if (music == null)
             {
-                Id = Id,
-                Title = request.Title,
-                Description = request.Description,
-                Language = request.Language,
-                Path = request.Path,
-                Published = request.Published,
-            };
-
-            await _writeRepository.AddAsync(music);
-            await _writeRepository.SaveAsync();
-
-            return new()
-            {
-                Music = new()
+                Guid Id = Guid.NewGuid();
+                Domain.Entities.Music newMusic = new()
                 {
-                    Id = Id.ToString(),
-                    Title = music.Title,
-                    Language = music.Language,
-                    Path = music.Path,
-                    Description = music.Description,
-                    PublishedAt = music.Published
-                }
-            };
+                    Id = Id,
+                    Title = request.Title,
+                    Description = request.Description,
+                    Language = request.Language,
+                    Path = request.Path,
+                    Published = request.Published,
+                };
+
+                await _writeRepository.AddAsync(newMusic);
+                await _writeRepository.SaveAsync();
+
+                return new()
+                {
+                    Music = new()
+                    {
+                        Id = Id.ToString(),
+                        Title = newMusic.Title,
+                        Language = newMusic.Language,
+                        Path = newMusic.Path,
+                        Description = newMusic.Description,
+                        PublishedAt = newMusic.Published
+                    }
+                };
+            }
+            return new();
+
         }
     }
 }
