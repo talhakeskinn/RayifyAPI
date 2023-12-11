@@ -26,7 +26,7 @@ namespace Rayify.Infrastructure.Services.CronJob
 
         public Task Execute(IJobExecutionContext context)
         {
-            Console.WriteLine("Talhaya götten");
+            Console.WriteLine("Deneme");
             return Task.FromResult(true);
         }
     }
