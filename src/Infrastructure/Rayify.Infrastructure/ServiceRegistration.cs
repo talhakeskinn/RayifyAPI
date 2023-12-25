@@ -24,7 +24,21 @@ namespace Rayify.Infrastructure
             services.AddScoped<IMusic, MusicService>();
             services.AddScoped<IYoutubeDownload, YoutubeDownload>();
             services.AddScoped<IConvertVideo, ConvertVideo>();
-            services.AddScoped<ICronJob, CronJob>();
+            services.AddQuartz(o =>
+            {
+                o.UseMicrosoftDependencyInjectionJobFactory();
+
+                var jobKey = JobKey.Create(nameof(CronJob));
+                o.AddJob<CronJob>(jobKey);
+                o.AddTrigger(trigger => 
+                    trigger.ForJob(jobKey)
+                    .WithCronSchedule("0 0 00 1/1 * ? *") // her gece 12 de 
+                );
+            });
+            services.AddQuartzHostedService(o =>
+            {
+                o.WaitForJobsToComplete = true;
+            });
             
         }
 

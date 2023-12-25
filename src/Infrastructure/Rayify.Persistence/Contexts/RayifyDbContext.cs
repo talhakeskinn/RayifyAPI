@@ -1,13 +1,9 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using Rayify.Application.Helpers;
 using Rayify.Domain.Entities;
 using Rayify.Domain.Entities.Base;
 using Rayify.Domain.Entities.Identity;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Rayify.Persistence.Contexts
 {
@@ -22,6 +18,7 @@ namespace Rayify.Persistence.Contexts
         public DbSet<Tag> Tags { get; set; }
         public DbSet<Genre> Genres { get; set; }
         public DbSet <Album> Albums { get; set; }
+        
 
         public override async Task<int> SaveChangesAsync( CancellationToken cancellationToken = default)
         {
@@ -35,7 +32,19 @@ namespace Rayify.Persistence.Contexts
                 } ;
 
             }
+
+            var singers = ChangeTracker.Entries<Singer>();
+            foreach (var item in singers)
+            {
+                _ = item.State switch
+                {
+                    EntityState.Added => item.Entity.Slug = Slugify.GenerateSlug(item.Entity.Name),
+                    _ => Slugify.GenerateSlug(item.Entity.Name)
+                };
+            }
+
             return await base.SaveChangesAsync( cancellationToken );
         }
+
     }
 }

@@ -1,11 +1,10 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Rayify.Application.Abstractions.Music;
-using MediaToolkit.Model;
-using MediaToolkit;
 using MediatR;
 using Rayify.Application.Features.Commands.Music.AddTrends;
 using Rayify.Application.Abstractions.YoutubeDownload;
 using Rayify.Application.Abstractions.ConvertVideo;
+using Rayify.Application.Helpers;
 
 namespace Rayify.API.Controllers
 {
@@ -48,9 +47,10 @@ namespace Rayify.API.Controllers
                 {
                     Title = music.Title,
                     Description = music.Description,
-                    Language= music.Language,
+                    Language = music.Language,
                     Published = music.PublishedAt,
-                    Path = mp3Path
+                    Path = mp3Path,
+                    SingerName = FindArtist.FromTitle(music.Title)
                 };
 
                 await _mediator.Send(request);

@@ -10,7 +10,8 @@ namespace Rayify.Domain.Entities
     public class Singer : BaseEntity
     {
         public string Name { get; set; }
-        public ICollection<Music> Musics { get; set; }
-        public ICollection<Album> Albums { get; set; }
+        public string? Slug { get; set; }
+        public ICollection<Music>? Musics { get; set; }
+        public ICollection<Album>? Albums { get; set; }
     }
 }

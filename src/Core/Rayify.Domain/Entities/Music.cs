@@ -17,7 +17,7 @@ namespace Rayify.Domain.Entities
         public ICollection<Tag>? Tags { get; set; }
         public Genre? Genre { get; set; }
         public Album? Album { get; set; }
-        public ICollection<Singer>? Singers { get; set; }
+        public ICollection<Singer> Singers { get; set; }
 
     }
 }

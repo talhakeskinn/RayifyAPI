@@ -14,6 +14,7 @@ namespace Rayify.Application.Features.Commands.Music.AddTrends
         public string? Language { get; set; }
         public string Path { get; set; }
         public DateTime Published { get; set; }
+        public string SingerName { get; set; }
 
     }
 }
